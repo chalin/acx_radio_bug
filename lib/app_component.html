@@ -1,0 +1,10 @@
+<p>Current hero: <b>{{currentHero.name}}</b></p>
+<div>
+    <material-radio-group [(ngModel)]="currentHero">
+        <material-radio *ngFor="let h of heroes" [value]="h">
+            {{h.name}} ({{h.id}})
+        </material-radio>
+    </material-radio-group>
+</div>
+
+<button (click)="resetHeroes()">Reset Heroes</button>
