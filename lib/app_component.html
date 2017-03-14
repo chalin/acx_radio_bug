@@ -8,3 +8,12 @@
 </div>
 
 <button (click)="resetHeroes()">Reset Heroes</button>
+
+<hr>
+<p>Same functionality in vanilla AngularDart:</p>
+<div *ngFor="let h of heroes">
+    <input type="radio" name="heroes"
+           [value]="h" [checked]="currentHero == h"
+           (click)="currentHero = h">
+    {{h.name}}
+</div>
